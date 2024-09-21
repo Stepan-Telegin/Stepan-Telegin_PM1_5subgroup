@@ -1,62 +1,46 @@
-// Р”РёСЂРµРєС‚РёРІР° РїСЂРµРїСЂРѕС†РµСЃСЃРѕСЂР°
-#include <iostream>
-#include <math.h>
-#include <iomanip>
-
-int main() 
+#include<iostream>
+int main()
 {
-	float f1 = 11.0/3.0;
-	float f2 = 0.000001f;
-	std::cout << std::setprecision(20) << f1 << std::endl;
-	std::cout << std::setprecision(20) << f1+f2 << std::endl;
-	return 0;
+    setlocale(LC_ALL, "Rus");
 
+    char char1 = 10;
+    char char2 = 11;
+    short short1 = 152; 
+    short short2 = 1698;
+    int int1 = 12588;
+    int int2 = -1999;
+    long long long_long1 = -1464648;
+    long long long_long2 = 11876164646;
+    unsigned int unsigned_int1 = 11545;
+    unsigned int unsigned_int2 = 16844;
 
-	// РўРёРїС‹ РґР°РЅРЅС‹С…
-	// 1. Р¦РµР»РѕС‡РёСЃР»РµРЅРЅС‹Рµ
-	// - char, 1 Р±Р°Р№С‚, -128..127
-	// - short, 2 Р±Р°Р№С‚Р°, -32768..32767
-	// - int, 4 Р±Р°Р№С‚Р°, -2^31 .. 2^31-1
-	// - long long, 8 Р±Р°Р№С‚, -2^63 .. 2^63-1
-	// - unsigned int, 4 Р±Р°Р№С‚, 0 .. 2^32-1
-	// 2. РЎРёРјРІРѕР»СЊРЅС‹Рµ
-	// - char, 1 Р±Р°Р№С‚, -128..127
-	// 3. Р’РµС‰РµСЃС‚РІРµРЅРЅС‹Рµ С‚РёРїС‹
-	// - float, 4 Р±Р°Р№С‚Р°, 6-7 С†РёС„СЂ
-	// - double, 8 Р±Р°Р№С‚РѕРІ, 15-16 С†РёС„СЂ 
-	// 4. Р›РѕРіРёС‡РµСЃРєРёР№ С‚РёРї
-	// - bool, 1 Р±Р°Р№С‚, true/false
+    char char1_ = -10;
+    char char2_ = -11;
 
-	// РђСЂРёС„РјРµС‚РёС‡РµСЃРєРёРµ РѕРїРµСЂР°С†РёРё
-	// +, -, *, /, %, +=, -=, ++, --
-	// Р’СЃС‚СЂРѕРµРЅРЅС‹Рµ С„СѓРЅРєС†РёРё
-	// pow, sqrt, sin, cos, tan, atan
-	// (int)c - РїСЂРёРІРµРґРµРЅРёРµ С‚РёРїР° РёР· char РІ int, c-style cast
+    float float1 = 1111;
+    float float2 = 1222;
+    double double1 = 15656565;
+    double double2 = 178787878787875;
 
-	//const double pi = acos(-1);
+    bool bool1 = true;
+    bool bool2 = false;
 
-	int sum = 0;
-	sum += 10; // sum = sum + 10;
-	std::cout << sum << std::endl;
+    std::cout << "Лабораторная рабаота №1\nПеременная - это именованная область памяти, которая хранит значение определённого типа данных." << std::endl;
+    std::cout << "Типы данных (название типа, размер в байтах, мин. и макс. значения, пример арифм. операции):" << std::endl;
+    std::cout << "1. Целочисленные:" << std::endl;
+    std::cout << "- char, 1 байт, -128..127, char1 * char2 = " << char1 * char2 << std::endl;
+    std::cout << "- short, 2 байта, -32768..32767, short1 - short2 = " << short1 - short2 << std::endl;
+    std::cout << "- int, 4 байта, -2^31 .. 2^31-1, int1 + int2 = " << int1 + int2 << std::endl;
+    std::cout << "- long long, 8 байт, -2^63 .. 2^63-1, long_long1 * long_long2 = " << long_long1 * long_long2 << std::endl;
+    std::cout << "- unsigned int, 4 байт, 0 .. 2^32-1, unsigned_int1 / unsigned_int2 = " << unsigned_int1 / unsigned_int2 << std::endl;
+    std::cout << "2. Символьные:" << std::endl;
+    std::cout << "- char, 1 байт, -128..127, char1 % char2 = " << char1 % char2 << std::endl;
+    std::cout << "3. Вещественные:" << std::endl;
+    std::cout << "- float, 4 байта, 6-7 цифр, float1 + float2 = " << float1 + float2 << std::endl;
+    std::cout << "- double, 8 байтов, 15-16 цифр, double1 * double2 = " << double1 * double2 << std::endl;
+    std::cout << "4. Логический тип:" << std::endl;
+    std::cout << "- bool, 1 байт, true/false, bool1 + bool2 = " << bool1 + bool2 << std::endl;
+    //std::cout << "" << std::endl;
 
-	int a, b;
-
-	int numsSum;  // lower camel case
-	int NumSum; // upper camel case
-	int Num_Sum; // snake case
-	int sumOfDigits;
-
-	// https://ru.wikipedia.org/wiki/%D0%9F%D0%B8_(%D1%87%D0%B8%D1%81%D0%BB%D0%BE)
-	const double pi = acos(-1);
-
-	std::cin >> a >> b;
-
-	if(b != 0)
-		std::cout << a/b << std::endl;	
-	else
-		std::cout << "Divide by zero " << __FILE__ << " " << __LINE__ << std::endl;	
-	
-
-	
-	return 0;
+    return 0;
 }
