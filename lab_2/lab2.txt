@@ -1,0 +1,31 @@
+#include <iostream>
+
+int main()
+{
+	std::cout << "Enter the lengths of the sides of the cuboid" << std::endl;
+
+	long long x, y, z;
+	std::cin >> x >> y >> z;;
+
+	if(not ((0 < x < 10000) or (0 < y < 10000) or (0 < z < 10000)))
+		std::cout << long long (x * y * z) << std::endl;
+	else
+		std::cout << "Error: no such cuboid exists" << std::endl;
+
+	return 0;
+}
+
+
+#include <iostream>
+
+int main()
+{
+	std::cout << "Enter the lengths of the sides of the cuboid" << std::endl;
+
+	long long x, y, z;
+	std::cin >> x >> y >> z;;
+
+	std::cout << "Cuboid volume = " << long long (x * y * z) << std::endl;
+
+	return 0;
+}
